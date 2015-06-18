@@ -1,26 +1,19 @@
 package tdd_demo.controllers;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.http.MediaType;
-import org.springframework.mock.http.MockHttpOutputMessage;
 import org.springframework.test.web.servlet.MockMvc;
 import tdd_demo.models.Address;
 import tdd_demo.repositories.AddressRepository;
 import tdd_demo.repositories.MemoryAddressRepository;
 import tdd_demo.services.AddressService;
 
-import java.io.IOException;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 /**
